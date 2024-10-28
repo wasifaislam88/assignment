@@ -114,11 +114,12 @@
 
 
 .why-web{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding-left:100px;
+    padding-right:100px;
     background-color: #f9f9f9;
 }
 
@@ -167,29 +168,70 @@
 }
 
 .target{
-    text-align: center;
+    /* text-align: center; */
     padding: 8px;
    /* border: 2px solid red; */
    position: static;
 
 }
-.target-text{
 
-    display: flex;
-    justify-content: space-around;
-   margin-top: 10px;
-    padding: 50px;
-    gap: 50px;
-    height: 300px;
-    
+.next-target h2{
+ text-align: center;
+}
+
+
+
+
+
+.next-target-container{
 
 }
+
+
+
+
+
+
+
+
+
+
+.target-card-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 .target-text-img {
     background-color: rgb(202, 240, 240);
     border-radius: 10px;
+    padding-left: 10px;
     
+}
 
+.target-text-img h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+.target-text-img p{
+    
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.target-text-img img{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.target-text-img button{
+    
+    padding-bottom: 20px;
+    padding-left: 10px;
 }
 
 .img{
@@ -197,12 +239,62 @@
     border-radius: 20px;
     
 }
+.img h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+   
+}
+.img p{
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.img img{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.img button{
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(145, 221, 221);
+}
+
+.target{
+    text-align: center;
+}
+
+
 
 .images{
     background-color: rgb(224, 125, 125);
     border-radius: 20px;
    
 }
+.images h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+   
+}
+
+.images p{
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.images img{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.images button{
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(206, 141, 163);
+}
+
+
 
 .target-text button{
     background-color: rgb(228, 165, 228);
@@ -210,15 +302,18 @@
 }
 
 
-.target-text button:hover{
-  background-color: plum;
+.target-text, button:hover{
+  background-color: rgb(160, 221, 170);
 }
 
-.target-img{
-    background-color: rgb(236, 248, 248);
+
+.target-card{
+    background-color: rgb(227, 238, 238);
     border-radius: 30px;
     gap: 30px;
+    display: flex;
 }
+
 
 
 
@@ -230,48 +325,118 @@ text-align: center;
 
 }
 
-.video{
- 
-width: 100%;
 
-margin: 10px 0px;
 
+.video iframe{
+    width: 600px;
+    height: 400px;
+    border: 7px solid gray;
+    border-radius: 20px;
 }
 
 .support{
     background-image: url(assets/handshake.jpg);
     border-radius: 16px;
 }
+
 .Submit-text{
    text-align: center;
    color: whitesmoke;
 }
 
 
-form{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 20px;
-    border-radius: 30px;
-    
+.suggest{
+    height: 40px;
+    width: 350px;
+    background-color: white;
+    color: gray;
+    padding: 10px;
+    border: 3px solid rgb(79, 63, 63);
+    border-radius:10px ;
 }
+
+form button{
+    height: 40px;
+    /* width: 350px; */
+    background-color: white;
+    color: gray;
+    padding: 10px;
+    border: 3px solid rgb(79, 63, 63);
+    border-radius:10px ;
+}
+
+
+
 footer{
     text-align: center;
-    padding: 1em;
-    background-color: #e7dbdb;
+    background-color: hsl(0, 25%, 92%);
+    border-radius: 10px;
+   
+}
+.footer-container{
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1010px;
+
 }
 
 
 /* responsive styles */
 
 
-@media screen and (max-width:768px) {
-    .card-content ,  .inspiration, .main-content , .next-targets{
+@media screen and (max-width: 576px) {
+    .card-content{
+
         flex-direction: column;
         text-align: center;
     }
-    form input{
-        width: 70%;
+    .contact-button{
+        padding: 5px;
+       
     }
+   
+
+    .why-web{
+        display: grid;
+       
+        grid-template-columns: repeat(1fr);
+        padding: 20px 30px 20px 30px;
+
+    }
+
+.target-card-container{
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.video iframe{
+    width: 200px;
+    height: 150px;
+
+}
+
+    
+
+.target-card{
+    flex-direction: column;
+   padding: 10px;
+   
+ 
+}
+
+
+.Submit-text{
+    font-size: 15px;
+}
+ .suggest{
+    height: 20px;
+    width: 200px;
+ }  
+ footer{
+    height: 150px;
+    width:300px ;
+}
+
 }
